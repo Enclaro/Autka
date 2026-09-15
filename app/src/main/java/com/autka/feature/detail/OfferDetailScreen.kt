@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -112,7 +111,7 @@ fun OfferDetailScreen(
                                 url = url,
                                 modifier = Modifier
                                     .size(width = 280.dp, height = 180.dp)
-                                    .clip(RoundedCornerShape(12.dp)),
+                                    .clip(MaterialTheme.shapes.medium),
                             )
                         }
                     }
@@ -122,7 +121,7 @@ fun OfferDetailScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(200.dp)
-                            .clip(RoundedCornerShape(12.dp)),
+                            .clip(MaterialTheme.shapes.medium),
                     )
                 }
                 Text(o.title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
