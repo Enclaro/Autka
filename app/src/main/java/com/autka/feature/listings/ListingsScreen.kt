@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -330,6 +331,11 @@ private fun SourceWarningBanner(failedSources: List<String>, onClick: () -> Unit
     Card(
         onClick = onClick,
         modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
+        colors =
+            CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+                contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
+            ),
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
@@ -339,7 +345,7 @@ private fun SourceWarningBanner(failedSources: List<String>, onClick: () -> Unit
             Icon(
                 Icons.Default.Info,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.error,
+                tint = MaterialTheme.colorScheme.onTertiaryContainer,
             )
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(
@@ -352,7 +358,7 @@ private fun SourceWarningBanner(failedSources: List<String>, onClick: () -> Unit
                 Text(
                     stringResource(R.string.listing_source_details),
                     style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.primary,
+                    color = MaterialTheme.colorScheme.onTertiaryContainer,
                 )
             }
         }
