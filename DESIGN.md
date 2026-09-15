@@ -16,7 +16,8 @@ Light semantic roles:
 
 - primary / road blue: `#1E5A96`
 - primary container: `#D7E9FF`
-- attention / amber: `#B86A00`
+- attention / amber: `#8A4F00`
+- amber container: `#F4D9B3`
 - background / canvas: `#F5F7FA`
 - surface: `#FFFFFF`
 - muted surface: `#E9EEF4`
