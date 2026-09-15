@@ -156,7 +156,8 @@ private enum SourceStatus {
     var color: Color {
         switch self {
         case .healthy: .green
-        case .unavailable, .failed: .red
+        case .unavailable: .orange
+        case .failed: .red
         case .disabled, .noRun: .secondary
         }
     }
