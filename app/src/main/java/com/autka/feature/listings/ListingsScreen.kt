@@ -345,7 +345,7 @@ private fun SourceWarningBanner(failedSources: List<String>, onClick: () -> Unit
             Icon(
                 Icons.Default.Info,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.tertiary,
+                tint = MaterialTheme.colorScheme.onTertiaryContainer,
             )
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(
